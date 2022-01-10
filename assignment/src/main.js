@@ -1,19 +1,24 @@
-const menuList = ['menu 1', 'menu 2', 'menu 3', 'menu 4'];
+import Navigo from "navigo";
+import HomePage from "./pages/home";
 
-// b1: Selector
-// b2: loop
-// b3: render
-const menuElement = document.querySelector('#menu');
-if (menuElement) {
-  // for
-  for (let i = 0; i < menuList.length; i++) {
-    menuElement.innerHTML += `<li>${menuList[i]}</li>`;
-  }
+const router = new Navigo("/", {linksSelector: "a"});
 
+const print = (content) => {
+  document.getElementById("app").innerHTML = content;
+};
 
+router.on({
+  "/": () => {
+    print(HomePage.render());
+  },
+  "/about": () => {
+    print("AboutPage");
+  },
+  "/product": () => {
+    print("Product Page");
+  },
+});
 
+router.notFound(() => print("Not Found Page"));
+router.resolve();
 
-
-
-}
-// template string
