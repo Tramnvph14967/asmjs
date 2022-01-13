@@ -35,9 +35,7 @@ router.on({
     "/signup": () => {
         render(Signup.print());
     },
-    // "/admin/dashboard": () => {
-    //     render(dashboard.print());
-    // },
+
     "/admin/news": () => {
         render(News_admin.print());
     },
