@@ -2,12 +2,12 @@ import Navigo from "navigo";
 import HomePage from "./pages/home";
 import Footer from "./components/footer";
 import Header from "./components/header";
-import AboutPage from "./pages/about";
+import News from "./pages/news";
 import DetailNewsPage from "./pages/detailNews";
 import signin from "./pages/signin";
 import Signup from "./pages/signup";
 // import dashboard from "./pages/admin/dashboard";
-import News from "./pages/admin/news";
+import News_admin from "./pages/admin/news";
 
 export const router = new Navigo("/", { linksSelector: "a" });
 
@@ -22,8 +22,8 @@ router.on({
     "/": () => {
         render(HomePage.print());
     },
-    "/about": () => {
-        render(AboutPage.print());
+    "/news": () => {
+        render(News.print());
     },
     "/news/:id": (value) =>{
         console.log(value.data.id);
@@ -39,7 +39,7 @@ router.on({
     //     render(dashboard.print());
     // },
     "/admin/news": () => {
-        render(News.print());
+        render(News_admin.print());
     },
 });
 router.notFound(() => print("Not Found Page"));
