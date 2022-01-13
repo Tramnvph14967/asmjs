@@ -22,6 +22,9 @@ router.on({
     "/": () => {
         render(HomePage.print());
     },
+    "/home": () => {
+        render(HomePage.print());
+    },
     "/news": () => {
         render(News.print());
     },
