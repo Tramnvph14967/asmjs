@@ -2,7 +2,7 @@ import Navigo from "navigo";
 import Header from "./components/admin/header";
 import Footer from "./components/admin/footer";
 import dashboard from "./pages/admin/dashboard";
-import News from "./pages/admin/news/news";
+import News from "./pages/admin/news/index";
 import Add from "./pages/admin/news/add";
 import Edit from "./pages/admin/news/edit";
 import Account from "./pages/admin/account/account";
