@@ -1,5 +1,4 @@
 import data from "../data";
-
 const DetailNewsPage = {
     print(id) {
         

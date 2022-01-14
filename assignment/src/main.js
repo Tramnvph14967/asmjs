@@ -6,8 +6,6 @@ import News from "./pages/news";
 import DetailNewsPage from "./pages/detailNews";
 import signin from "./pages/signin";
 import Signup from "./pages/signup";
-// import dashboard from "./pages/admin/dashboard";
-import News_admin from "./pages/admin/news";
 
 export const router = new Navigo("/", { linksSelector: "a" });
 
@@ -37,10 +35,6 @@ router.on({
     },
     "/signup": () => {
         render(Signup.print());
-    },
-
-    "/admin/news": () => {
-        render(News_admin.print());
     },
 });
 router.notFound(() => print("Not Found Page"));

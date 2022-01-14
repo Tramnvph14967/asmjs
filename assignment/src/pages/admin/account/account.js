@@ -1,7 +1,8 @@
-const News = {
+const Account = {
     print() {
         return /* html */`
-            <div class="max-w-5xl mx-auto">
+
+            <div class="max-w-5xl mx-auto pt-10">
             <div class="flex flex-col">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
               <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -20,6 +21,9 @@ const News = {
                         </th>
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                           Role
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                          Action
                         </th>
                         <th scope="col" class="relative px-6 py-3">
                           <span class="sr-only">Edit</span>
@@ -71,4 +75,4 @@ const News = {
         `;
     },
 };
-export default News;
+export default Account;
