@@ -1,5 +1,4 @@
 import TT_SV from "../data";
-import {HĐ_SV} from "../data";
 
 const HomePage = {
     print() {
@@ -22,19 +21,7 @@ const HomePage = {
                     `).join("")}
                 </div>
             </div>
-            <div class="news">
-            <h2 class="text-2xl font-semibold my-4">Hoạt Động Sinh Viên</h2>
-            <div class="grid grid-cols-3 gap-8">
-                ${HĐ_SV.map((post) => `
-                    <div class="border p-4">
-                        <a href="/news/${post.id}">
-                            <img src="${post.img}" alt=""/>
-                        </a>
-                        <h4 class="my-3"><a href="/news/${post.id}" class="font-semibold text-lg text-orange-500">${post.title}</a></h4>
-                        <p>${post.desc}</p>
-                    </div>
-                `).join("")}
-            </div>
+            
         </div>
 
 
