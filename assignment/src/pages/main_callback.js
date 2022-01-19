@@ -18,7 +18,6 @@
 // click -> goi sum(user, removeLocalStorage);
 
 // promise: Là 1 đối tượng đặc biệt, xử lý bất đồng bộ
-
 function resolveAfter2s() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -30,16 +29,17 @@ function resolveAfter2s() {
         }, 3000);
     });
 }
-
 const getData = resolveAfter2s();
-
-getData.then((result) => [...result, "Nhung"])
+getData.then((result) => [...result,
+ "Nhung"])
     .then((data) => console.log(data))
     .catch((error) => console.log(error));
 
-async function getData2() {
-    const result = await resolveAfter2s();
-    const data = await [...result, "nhung"];
-    console.log(data);
+
+//async/await
+async function getData2() { //khai báo 1 hàm
+    const result = await resolveAfter2s(); //gọi ra hàm resolveAfter2s
+    const data = await [...result, "nhung"]; //gán giá trị vào mảng
+    console.log(data);// in ra thằng data
 }
 getData2();
