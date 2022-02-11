@@ -14,5 +14,14 @@ const Header = {
             </div>
         </header>`;
     },
+    afterRender(){
+        const email = document.querySelector('#email');
+        const logout = document.querySelector('#logout');
+        email.innerHTML = JSON.parse(localStorage.getItem('user')).email;
+
+        logout.addEventListener('click', function(){
+            localStorage.removeItem('user');
+        })
+    }
 };
 export default Header;
